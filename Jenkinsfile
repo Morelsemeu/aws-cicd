@@ -5,7 +5,7 @@ pipeline {
     BRANCH_NAME = 'main'
     GIT_URL = 'https://github.com/Morelsemeu/aws-cicd.git'
     IMAGE_TAG = 'Morelsemeu/awscicd'
-    IMAGE_VERSION = "${BUILD_NUMBER}"
+    IMAGE_VERSION = ${BUILD_NUMBER}
  }
 
 
