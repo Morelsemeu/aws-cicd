@@ -3,7 +3,7 @@ pipeline {
 
  environment {
     BRANCH_NAME = 'main'
-    GIT_URL = 'https://github.com/morelsemeu/aws-cicd.git'
+    GIT_URL = 'https://github.com/Morelsemeu/aws-cicd.git'
     IMAGE_TAG = 'Morelsemeu/awscicd'
     IMAGE_VERSION = "${BUILD_NUMBER}"
  }
@@ -18,7 +18,7 @@ pipeline {
     }
   stage('docker build'){
     steps{
-        sh 'docker build -t "${IMAGE_TAG}:${IMAGE_VERSION}" . '
+        sh 'docker build -t "${IMAGE_TAG}:${IMAGE_VERSION}" .'
         sh 'docker images'
     }
   }
